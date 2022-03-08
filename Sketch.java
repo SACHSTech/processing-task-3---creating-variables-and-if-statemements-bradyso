@@ -90,11 +90,11 @@ public class Sketch extends PApplet {
       // make only one loop
       noLoop();
 
-      // find current time
+      // find current time in GMT
       int intHour = hour();
       int intMinutes = minute();
       int intSecond = second();
-      String strTime = ("The current time is " + str(intHour - 17) + ":" + str(intMinutes) + ":" + str(intSecond));
+      String strTime = ("The current time in GMT is:  " + str(intHour % 12) + ":" + str(intMinutes) + ":" + str(intSecond));
       fill(0, 0, 0);
       textSize(20);
       text(strTime, 20, 315);
